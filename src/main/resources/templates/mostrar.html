@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">	
+</head>
+<body>
+ 	<a href="/meCadastar"> Compre sua passagem </a>
+	<h1>Lista de onibus e seu o seu destino</h1>
+	<div th:each="onibus: ${busao}">
+		
+		
+		<p th:text="'Empresa:' + ${onibus.empresa}"></p>
+		
+		<p th:text="'Destino:' + ${onibus.destino}"></p>
+		
+		<p th:text="'Tempo de viagem:' + ${onibus.tempoDeViagem}"></p>
+		<p th:text="'Lugares no onibus:' + ${onibus.lugares}"></p>
+		
+		</div>
+</body>
+</html>
